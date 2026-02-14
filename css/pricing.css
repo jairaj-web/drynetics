@@ -1,0 +1,416 @@
+/* ===== PRICING PAGE STYLES ===== */
+
+/* --- Pricing Cards Grid --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    align-items: stretch;
+}
+
+/* --- Pricing Card --- */
+.pricing-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Accent top bar on all cards */
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transition: all var(--transition-base);
+}
+
+/* --- Featured / Popular Card --- */
+.pricing-card.featured {
+    border-color: var(--accent);
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: var(--shadow-xl), 0 0 0 1px rgba(0, 180, 216, 0.1);
+}
+
+.pricing-card.featured::before {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.03) translateY(-8px);
+}
+
+/* Popular Badge */
+.pricing-badge {
+    position: absolute;
+    top: 16px;
+    right: -32px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 2.5rem;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 10px rgba(0, 180, 216, 0.3);
+    z-index: 3;
+}
+
+/* --- Card Icon --- */
+.pricing-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    background: linear-gradient(135deg, var(--cream), #e8f4f8);
+    transition: all var(--transition-base);
+}
+
+.pricing-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: var(--primary);
+    transition: all var(--transition-base);
+}
+
+.pricing-card.featured .pricing-icon {
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+.pricing-card.featured .pricing-icon svg {
+    fill: var(--white);
+}
+
+.pricing-card:hover .pricing-icon {
+    transform: scale(1.1);
+}
+
+/* --- Card Content --- */
+.pricing-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: var(--space-xs);
+}
+
+.pricing-amount {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.pricing-unit {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--soft-gray);
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+/* --- Feature List --- */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-lg) 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.55rem 0;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* --- Card CTA --- */
+.pricing-card .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* --- Pricing Note --- */
+.pricing-note {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--cream);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--light-gray);
+}
+
+.pricing-note p {
+    font-size: 0.95rem;
+    color: var(--soft-gray);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pricing-note svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--gold);
+    flex-shrink: 0;
+}
+
+/* --- Bulk/Corporate CTA Section --- */
+.bulk-cta {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bulk-cta::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -15%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.bulk-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.bulk-cta h2 {
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--space-sm);
+}
+
+.bulk-cta p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--space-lg);
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bulk-cta .btn {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- FAQ Accordion --- */
+.pricing-faq {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    border: 1px solid var(--light-gray);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: 1.1rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--primary);
+    text-align: left;
+    transition: all var(--transition-base);
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-question svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent);
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+}
+
+.faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer-inner {
+    padding: 0 1.5rem 1.1rem;
+    font-size: 0.9rem;
+    color: var(--soft-gray);
+    line-height: 1.7;
+}
+
+.faq-answer-inner p {
+    margin-bottom: 0;
+}
+
+/* View All FAQs Link */
+.faq-more {
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+.faq-more a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent);
+    transition: all var(--transition-base);
+}
+
+.faq-more a:hover {
+    color: var(--primary);
+    gap: 0.6rem;
+}
+
+.faq-more a svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform var(--transition-base);
+}
+
+.faq-more a:hover svg {
+    transform: translateX(3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .pricing-card {
+        padding: var(--space-lg);
+    }
+
+    .pricing-note {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .bulk-cta {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .faq-question {
+        padding: 1rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-answer-inner {
+        padding: 0 1.2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-grid {
+        max-width: 100%;
+    }
+
+    .pricing-amount {
+        font-size: 2rem;
+    }
+}

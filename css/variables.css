@@ -1,0 +1,64 @@
+:root {
+    /* Colors — extracted from coming-soon landing page */
+    --primary: #1e3a5f;
+    --primary-light: #2d5a8a;
+    --primary-dark: #152d4a;
+    --accent: #00b4d8;
+    --accent-light: #90e0ef;
+    --accent-dark: #0096b7;
+    --gold: #c9a962;
+    --gold-light: #d4af37;
+    --cream: #f8fbff;
+    --white: #ffffff;
+    --charcoal: #2d2d2d;
+    --soft-gray: #7a8899;
+    --light-gray: #e8edf2;
+
+    /* Status colors */
+    --success: #22c55e;
+    --success-light: #dcfce7;
+    --success-dark: #166534;
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+    --error: #ef4444;
+    --whatsapp: #25D366;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
+    --shadow-gold: 0 8px 25px rgba(201, 169, 98, 0.4);
+    --shadow-accent: 0 10px 30px rgba(0, 180, 216, 0.3);
+    --shadow-primary: 0 10px 30px rgba(30, 58, 95, 0.3);
+
+    /* Border radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-pill: 50px;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    /* Container */
+    --container-max: 1200px;
+    --container-narrow: 900px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}

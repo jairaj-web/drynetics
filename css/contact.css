@@ -1,0 +1,436 @@
+/* ===== CONTACT PAGE STYLES ===== */
+
+/* Contact Section Layout */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+/* ===== CONTACT INFO CARDS ===== */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-info-card .info-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cream), #e8f4f8);
+}
+
+.contact-info-card .info-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--primary);
+}
+
+.contact-info-card .info-icon.icon-whatsapp {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.contact-info-card .info-icon.icon-whatsapp svg {
+    fill: var(--whatsapp);
+}
+
+.contact-info-card .info-icon.icon-accent {
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+.contact-info-card .info-icon.icon-accent svg {
+    fill: var(--accent);
+}
+
+.contact-info-card .info-icon.icon-gold {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.contact-info-card .info-icon.icon-gold svg {
+    fill: #92400e;
+}
+
+.contact-info-card .info-content h4 {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--soft-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.contact-info-card .info-content p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 0;
+}
+
+.contact-info-card .info-content a {
+    color: var(--primary);
+    font-weight: 500;
+    transition: color var(--transition-base);
+}
+
+.contact-info-card .info-content a:hover {
+    color: var(--accent);
+}
+
+.contact-info-card .info-content .whatsapp-link {
+    color: var(--whatsapp);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.contact-info-card .info-content .whatsapp-link:hover {
+    color: #1da851;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form-wrapper {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+
+.contact-form-wrapper h3 {
+    margin-bottom: var(--space-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.form-submit-row {
+    margin-top: var(--space-sm);
+}
+
+.form-submit-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+/* ===== PICKUP SCHEDULER ===== */
+.pickup-section {
+    background: var(--cream);
+}
+
+.pickup-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pickup-form-card {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.pickup-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.pickup-form-card .form-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.pickup-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: linear-gradient(135deg, var(--cream), #e8f4f8);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--accent);
+}
+
+.pickup-note svg {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    fill: var(--accent);
+}
+
+.pickup-note p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.pickup-whatsapp-alt {
+    text-align: center;
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--light-gray);
+}
+
+.pickup-whatsapp-alt p {
+    color: var(--soft-gray);
+    margin-bottom: var(--space-sm);
+    font-size: 0.95rem;
+}
+
+/* ===== MAP PLACEHOLDER ===== */
+.map-section {
+    padding: 0;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--light-gray), #d0d8e0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    color: var(--soft-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 49.5%, rgba(122, 136, 153, 0.1) 49.5%, rgba(122, 136, 153, 0.1) 50.5%, transparent 50.5%),
+        linear-gradient(0deg, transparent 49.5%, rgba(122, 136, 153, 0.1) 49.5%, rgba(122, 136, 153, 0.1) 50.5%, transparent 50.5%);
+    background-size: 60px 60px;
+}
+
+.map-placeholder svg {
+    width: 56px;
+    height: 56px;
+    fill: var(--soft-gray);
+    opacity: 0.5;
+}
+
+.map-placeholder p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.map-placeholder span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ===== SUCCESS TOAST / OVERLAY ===== */
+.form-success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.form-success-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.form-success-card {
+    background: var(--white);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-xl) var(--space-2xl);
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform var(--transition-base);
+    box-shadow: var(--shadow-xl);
+}
+
+.form-success-overlay.active .form-success-card {
+    transform: scale(1);
+}
+
+.form-success-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+}
+
+.form-success-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--success);
+}
+
+.form-success-card h3 {
+    color: var(--primary);
+    margin-bottom: var(--space-xs);
+}
+
+.form-success-card p {
+    color: var(--soft-gray);
+    margin-bottom: var(--space-lg);
+}
+
+.form-success-card .success-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-success-close {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--light-gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+}
+
+.form-success-close:hover {
+    background: var(--charcoal);
+}
+
+.form-success-close svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--soft-gray);
+}
+
+.form-success-close:hover svg {
+    fill: var(--white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+
+    .pickup-form-card .form-row-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .pickup-form-card .form-row-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper,
+    .pickup-form-card {
+        padding: var(--space-lg);
+    }
+
+    .map-placeholder {
+        height: 300px;
+    }
+
+    .form-success-card {
+        padding: var(--space-lg);
+    }
+
+    .form-success-card .success-actions {
+        flex-direction: column;
+    }
+
+    .form-success-card .success-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--space-md);
+    }
+}

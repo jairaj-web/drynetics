@@ -1,0 +1,276 @@
+/* ===== ABOUT PAGE STYLES ===== */
+
+/* --- Company Story Section --- */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.story-content h3 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-bottom: var(--space-md);
+}
+
+.story-content p {
+    color: var(--soft-gray);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+
+.story-image .img-placeholder {
+    min-height: 380px;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-radius: var(--radius-2xl);
+}
+
+.story-image .img-placeholder span {
+    font-size: 0.9rem;
+    color: var(--soft-gray);
+    font-weight: 500;
+}
+
+/* --- Mission & Vision Cards --- */
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.mv-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.mv-card.mission::before {
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+
+.mv-card.vision::before {
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.mv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.mv-card .icon-box {
+    margin: 0 auto var(--space-md);
+}
+
+.mv-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-sm);
+}
+
+.mv-card p {
+    color: var(--soft-gray);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* --- Why Drynetics / USP Grid --- */
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.usp-item {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.usp-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.usp-item .icon-box {
+    margin: 0 auto var(--space-sm);
+}
+
+.usp-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: var(--space-xs);
+}
+
+.usp-item p {
+    color: var(--soft-gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* --- Team Section --- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.team-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--light-gray), #dde4eb);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-photo svg {
+    width: 48px;
+    height: 48px;
+    fill: var(--soft-gray);
+    opacity: 0.5;
+}
+
+.team-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.team-card .team-role {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* --- Stats Section --- */
+.about-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+    padding: var(--space-lg) 0;
+}
+
+.about-stat-item {
+    padding: var(--space-md);
+}
+
+.about-stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+}
+
+.about-stat-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+}
+
+/* --- CTA Section (reuses services pattern) --- */
+.about-cta .cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .story-image {
+        order: -1;
+    }
+
+    .story-image .img-placeholder {
+        min-height: 280px;
+    }
+
+    .usp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .usp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .about-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .about-stat-number {
+        font-size: 2.2rem;
+    }
+
+    .cta-section {
+        padding: var(--space-xl) var(--space-md);
+    }
+}

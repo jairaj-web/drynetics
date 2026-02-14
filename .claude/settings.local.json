@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:drynetics.com)",
+      "Bash(ls:*)"
+    ]
+  }
+}
