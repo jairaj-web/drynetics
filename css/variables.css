@@ -1,11 +1,11 @@
 :root {
-    /* Colors — extracted from coming-soon landing page */
-    --primary: #1e3a5f;
-    --primary-light: #2d5a8a;
-    --primary-dark: #152d4a;
-    --accent: #00b4d8;
-    --accent-light: #90e0ef;
-    --accent-dark: #0096b7;
+    /* Colors — Professional Ocean Blue Palette */
+    --primary: #0077b6;        /* Deep ocean blue */
+    --primary-light: #0096c7;   /* Bright sky blue */
+    --primary-dark: #023e8a;    /* Navy contrast */
+    --accent: #00b4d8;          /* Sky blue */
+    --accent-light: #90e0ef;    /* Light sky blue */
+    --accent-dark: #0096b7;      /* Darker sky blue */
     --gold: #c9a962;
     --gold-light: #d4af37;
     --cream: #f8fbff;
@@ -30,7 +30,7 @@
     --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.12);
     --shadow-gold: 0 8px 25px rgba(201, 169, 98, 0.4);
     --shadow-accent: 0 10px 30px rgba(0, 180, 216, 0.3);
-    --shadow-primary: 0 10px 30px rgba(30, 58, 95, 0.3);
+    --shadow-primary: 0 10px 30px rgba(0, 119, 182, 0.3);
 
     /* Border radius */
     --radius-sm: 8px;
